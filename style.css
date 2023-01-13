@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body{
+    margin: 0;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    background: white;
+}
+
+#logo{
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 50px;
+    font-family:'Lily Script One', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(160, 138, 96);
+    -webkit-transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all ;
+        -ms-translation: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease all;
+}
+#logo:hover{
+    color: orange;
+}
+
+form{
+    margin: 0 auto 0 auto;
+    padding: 50px;
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+    background-color:white;
+    border-radius: 10px;
+}
+
+form label{
+    font-size: 15px;
+    color: darkgray;
+    cursor: pointer;
+}
+form label,
+form input{
+    float: left;
+    clear: both;
+}
+
+form input{
+    margin: 15px 0;
+    padding: 15px 10px;
+    width: 100%;
+    outline:none;
+    border: 1px solid#bbb;
+    border-radius: 10px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing:border-box;
+        box-sizing: border-box;
+    -webkit-transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all ;
+        -ms-translation: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease all;
+}
+
+form input[type=text]:focus{
+    border-color: orange;
+}
+button{
+    padding: 15px 50px;
+    width: auto;
+    background: orange;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    clear: right;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+button:hover{
+    opacity: 0.9;
+}
+
+button:active{
+    opacity: 0.4;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+.result{
+    padding: 0 29rem;
+}
+.name{
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    list-style: none;
+    text-transform: uppercase;
+    color: rgb(160, 138, 96);
+}

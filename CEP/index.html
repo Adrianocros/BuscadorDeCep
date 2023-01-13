@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+  <h1 id="logo">Buscar CEP</h1>
+    <!-- Inicio do formulario -->
+    <form method="get" action=".">
+      <label>Cep:
+      <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" required/></label><br />
+      <label>Rua:
+      <input name="rua" type="text" id="rua" size="60" disabled/></label><br />
+      <label>Bairro:
+      <input name="bairro" type="text" id="bairro" size="40" disabled/></label><br />
+      <label>Cidade:
+      <input name="cidade" type="text" id="cidade" size="40"disabled /></label><br />
+      <label>Estado:
+      <input name="uf" type="text" id="uf" size="1"disabled /></label><br />
+      <label>DDD:
+        <input name="ddd" type="text" id="ddd" size="1"disabled /></label><br />
+      <!--<label>IBGE:
+      <input name="ibge" type="text" id="ibge" size="8" disabled/></label><br />-->
+    </form>
+      <div class="btn">
+        <button type="button" name="submit" onclick="pesquisacep()" >Buscar</button>
+        <button type="button" name="submit" onclick="limpa_formulário_cep()" >Limpar</button>
+      </div>
+      
+ 
+    
+    <script src="./script.js"></script>
+</body>
+</html>

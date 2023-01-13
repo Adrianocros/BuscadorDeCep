@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body{
+    margin: 0;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+#logo{
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 10px;
+    font-family:'Lily Script One', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(160, 138, 96);
+    -webkit-transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all ;
+        -ms-translation: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease all;
+}
+#logo:hover{
+    color: orange;
+}
+
+form{
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    width:500px;
+    height: auto;
+    overflow: hidden;
+    border: 3px solid orange;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+form label{
+    font-size: 15px;
+    color: orange;
+    font-weight: bold;
+    cursor: pointer;
+}
+form label,
+form input{
+    float: left;
+    clear: both;
+}
+
+form input{
+    margin: 15px 0;
+    padding: 8px ;
+    width: 100%;
+    font-weight: bold;
+    font-family:'Ubuntu', sans-serif;
+    outline:none;
+    border: 2px solid#bbb;
+    border-radius: 10px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing:border-box;
+        box-sizing: border-box;
+    -webkit-transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all ;
+        -ms-translation: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease all;
+}
+
+form input[type=text]:focus{
+    border-color: orange;
+}
+button{
+    padding: 10px 50px;
+    background: orange;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    clear: right;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btn{
+    margin: 13px 0 0  24rem;
+}
+button:hover{
+    opacity: 0.9;
+}
+
+button:active{
+    opacity: 0.4;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+.result{
+    padding: 0 29rem;
+}
+.name{
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    list-style: none;
+    text-transform: uppercase;
+    color: rgb(160, 138, 96);
+}
+
+@media screen and (max-width: 575px) {
+    form{
+        width:300px;
+    }
+    #logo{
+    width: 110px;
+    font-size: 20px;
+    }
+
+    form input{
+        padding: 5px ;
+    }
+    .btn{
+        margin: 13px 0 0  1.5rem;
+    }
+
+
+}

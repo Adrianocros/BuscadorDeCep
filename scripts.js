@@ -1,0 +1,51 @@
+function criarElementoResultadoSucesso(value){
+    const result = document.querySelector("#result");
+    result.innerHTML = "";
+    if(!!value.cep){
+        for(const property in value){
+            result.insertAdjacentHTML(
+                "beforebegin",
+                `<li>${property}: ${value[property]}</li>`
+            );
+        }
+    }else{
+        criarElementoResultadoErro("CEP não encontrado !!!")
+    }
+}
+
+function criarElementoResultadoErro(value){
+    const result = document.querySelector("#result");
+    result.innerHTML = "";
+    result.insertAdjacentHTML(
+        "beforeend",
+        `<h2 style="color='#ff0">${value}</h2>`
+    )
+}
+
+function pesquisaCEP(cep){
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
+    fetch(url)
+    .then((response) => response.json())
+    .then((result)=> {
+        criarElementoResultadoSucesso(result)
+    })
+    .catch((err) => {
+        criarElementoResultadoErro("CEP invalido !")
+    });
+}
+
+const form = document.querySelector("form");
+const inputCEP = document.querySelector("#cep");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+    //Nova variável "cep" somente com dígitos.
+    const cep = inputCEP.value.replace(/\D/g,"")
+    //Expressão regular para validar o CEP.
+    if(/^[0-9]{8}$/.test(cep)){
+        pesquisaCEP(cep);
+    }else{
+        criarElementoResultadoErro("CEP invalido !!")
+    }
+    
+})
